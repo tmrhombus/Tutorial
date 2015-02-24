@@ -1,10 +1,10 @@
 ########################################################
 #
-# This is the script you actually call
+# This is the script you call to submit to HTCondor
 #
-# bash submit_that.sh
+# bash submitthat.sh
 # 
-# nohup bash submit_that.sh > my_submission.out 2>&1&
+# nohup bash submitthat.sh > my_submission.out 2>&1&
 #
 ########################################################
 

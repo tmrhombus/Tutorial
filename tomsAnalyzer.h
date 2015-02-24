@@ -16,6 +16,7 @@
 #include <iostream>
 #include <exception>
 #include <cmath>
+#include <TLorentzVector.h>
 
 // Header file for the classes stored in the TTree if any.
 #include <vector>
@@ -31,6 +32,11 @@ public :
    TH1F h_goodJ1_pt;
    TH1F h_goodMuon_pt;
    TH1F h_goodJ3J4_mass;
+   // variables to be made
+   TLorentzVector fourVec_J3;
+   TLorentzVector fourVec_J4;
+   TLorentzVector fourVec_J3J4;
+   double goodJ3J4_mass;
 
    // Bools for Filters
    Bool_t oneGoodMuon;

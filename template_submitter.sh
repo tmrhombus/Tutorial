@@ -8,19 +8,8 @@ popd () {
  command popd "$@" > /dev/null
 }
 
-runname="Shmutorial"
-
-# where the analyzer is kept
-alzr_dir=$(pwd)
-# where we eventually accesss the files from
-base_in_dir=root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/
-hdfs_in_dir=/hdfs/store/user/tperry/Tutorial/ # needed for find
-# where we'll we submit from
-base_submit_dir=/nfs_scratch/$USER/$runname/
-
 samplename=THESAMPLE
  
-mkdir -p SampleInfo/
 mkdir -p SampleInfo/${runname}/
 
 # make a list of all the samples in hdfs_in_dir
@@ -35,9 +24,9 @@ mylist="./SampleInfo/${runname}/ez_list_${samplename}.txt"
 sed -i 's/^.*\(\/nTuple\)/nTuple/g' $mylist
 sed -i 's/.root//g' $mylist
 
-# give this a try!
-python scripts/eventCounter.py ./SampleInfo/${runname}/list_${samplename}.txt \
-                            >> ./SampleInfo/${runname}/initialEvents.txt
+# count the total number of events, not strictly necessary here, but useful
+python eventCounter.py ./SampleInfo/${runname}/list_${samplename}.txt \
+                    >> ./SampleInfo/${runname}/initialEvents.txt
 
 # for each file from list... submit
 while read filename

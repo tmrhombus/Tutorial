@@ -35,7 +35,7 @@ void SAMPLE_callAnalyzer()
  
  m.Init(theChain); 
     
- TString name = "SAMPLE_FILENAME";
+ TString name = "SAMPLE_FILENAME.root";
  std::cout<<name<<"\n";
 
  m.Loop( name );

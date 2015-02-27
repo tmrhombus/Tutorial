@@ -25,15 +25,16 @@ void tomsAnalyzer::Loop( TString outfile_name )
       }
  
       // let's make a composite variable: dijet mass of J3J4
-
-      //          bJ2    mu
-      //    \      |_W_/
-      //     \  t /    \ nu
-      //      \__/
-      //      /  \      J3
-      //     /  t \__W_/
-      //    /     |    \
-      //         bJ1    J4
+      /*
+      //            bJ2    mu
+      //    \        |__W__/
+      //     \     t /     \nu
+      //      \_____/
+      //      /     \       J3
+      //     /     t \__W__/
+      //    /        |     \
+      //            bJ1     J4
+      */
 
       goodJ3J4_mass = -1.;
       // at least 4 jets

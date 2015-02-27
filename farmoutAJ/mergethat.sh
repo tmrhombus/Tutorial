@@ -14,6 +14,6 @@ for samplename in \
 "TTbar"
 
 do
- hadd ../data/${runname}/Analyzed_${samplename}.root ${hdfs_out_dir}/*root
+ hadd ../data/${runname}/Analyzed_${samplename}.root ${hdfs}/${runname}-farmoutAnalyzer/*root
 done
 

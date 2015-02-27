@@ -25,6 +25,16 @@ void tomsAnalyzer::Loop( TString outfile_name )
       }
  
       // let's make a composite variable: dijet mass of J3J4
+
+      //          bJ2    mu
+      //    \      |_W_/
+      //     \  t /    \ nu
+      //      \__/
+      //      /  \      J3
+      //     /  t \__W_/
+      //    /     |    \
+      //         bJ1    J4
+
       goodJ3J4_mass = -1.;
       // at least 4 jets
       atLeast4Jets = kFALSE;
@@ -67,7 +77,7 @@ void tomsAnalyzer::Loop( TString outfile_name )
    } // loop over all events
 
    // write the histograms to file
-   TFile *outfile = new TFile(outfile_name+".root","RECREATE");
+   TFile *outfile = new TFile(outfile_name,"RECREATE");
    outfile->cd();
 
    h_goodJ1_pt.Write();

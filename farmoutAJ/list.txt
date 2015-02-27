@@ -1,0 +1,15 @@
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_01.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_02.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_03.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_04.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_05.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_06.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_07.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_08.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_09.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_10.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_11.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_12.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_13.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_14.root
+root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_15.root

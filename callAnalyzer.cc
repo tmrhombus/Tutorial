@@ -28,7 +28,7 @@ void callAnalyzer()
  
  m.Init(theChain); 
     
- TString name = "TTbar_nTuple_TTbar_SemiLeptonic_01";
+ TString name = "TTbar_nTuple_TTbar_SemiLeptonic_01.root";
  std::cout<<name<<"\n";
 
  m.Loop( name );

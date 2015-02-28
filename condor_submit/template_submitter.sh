@@ -10,25 +10,8 @@ popd () {
 
 samplename=THESAMPLE
  
-mkdir -p SampleInfo/${runname}/
-
-# make a list of all the samples in hdfs_in_dir
-find ${hdfs_in_dir}${samplename}/*root >  SampleInfo/${runname}/list_${samplename}.txt
-
-cp "./SampleInfo/${runname}/list_${samplename}.txt" \
-   "./SampleInfo/${runname}/ez_list_${samplename}.txt" 
-
-mylist="./SampleInfo/${runname}/ez_list_${samplename}.txt" 
-
-# cut path (up to "nTuple") and .root from filenames 
-sed -i 's/^.*\(\/nTuple\)/nTuple/g' $mylist
-sed -i 's/.root//g' $mylist
-
-# count the total number of events, not strictly necessary here, but useful
-python eventCounter.py ./SampleInfo/${runname}/list_${samplename}.txt \
-                    >> ./SampleInfo/${runname}/initialEvents.txt
-
 # for each file from list... submit
+mylist="${alzr_dir}/Output/Lists/ez_list_${samplename}.txt" 
 while read filename
 do
 

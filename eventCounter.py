@@ -24,18 +24,20 @@ def file_len(fname):
 counter = 0
 total_events = 0
 
-list_of_files = argv[1]
+samplename = argv[1]
+list_of_files = argv[2]
+outfile_name = argv[3]
 
 numfiles = file_len(list_of_files)
 with open(list_of_files) as f:
  for filename in f:
-  if counter % 100 == 0:
-   print("Processed " + str(counter) + " out of " + str(numfiles) + " files")
-  #get file of current ntuples from input directory
   filename = filename.rstrip()
   ntuple_file = ROOT.TFile(filename)
   summary = ntuple_file.Get("summary/results")
   nr_events = summary.GetBinContent(1)
   total_events+=nr_events
   counter = counter+1
-print("Total Number of Events: %s"%(total_events))
+
+outfile = open(outfile_name,'a')
+outfile.write("%s Events: %s\n"%(samplename,int(total_events)))
+outfile.close()

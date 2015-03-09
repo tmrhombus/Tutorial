@@ -8,12 +8,10 @@
 #
 ########################################################
 
-mkdir -p ../data/${runname}
-
 for samplename in \
 "TTbar"
 
 do
- hadd ../data/${runname}/Analyzed_${samplename}.root ${hdfs}/${runname}-farmoutAnalyzer/*root
+ hadd ${rootdir}/Analyzed_${samplename}.root ${hdfs}/${runname}-farmoutAnalyzer/*root
 done
 

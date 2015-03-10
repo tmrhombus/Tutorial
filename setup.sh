@@ -16,8 +16,11 @@ export hdfs_in_dir="/hdfs/store/user/tperry/Tutorial" # needed for find
 export base_submit_dir="/nfs_scratch/${USER}/${runname}"
 
 # Output
+mkdir -p "${alzr_dir}/Output/test"
 mkdir -p "${alzr_dir}/Output/Lists"
 mkdir -p "${alzr_dir}/Output/${runname}/roots"
+# local running 
+export testdir="${alzr_dir}/Output/test"
 # lists of input files
 export listdir="${alzr_dir}/Output/Lists"
 # analyzed .root files

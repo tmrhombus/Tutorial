@@ -27,8 +27,9 @@ void callAnalyzer()
  TString dirName;
  
  m.Init(theChain); 
-    
- TString name = "TTbar_nTuple_TTbar_SemiLeptonic_01.root";
+ 
+ TString outdir = getenv("testdir");
+ TString name = outdir+"/TTbar_nTuple_TTbar_SemiLeptonic_01.root";
  std::cout<<name<<"\n";
 
  m.Loop( name );

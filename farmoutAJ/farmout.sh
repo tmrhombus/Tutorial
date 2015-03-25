@@ -3,7 +3,8 @@
 farmoutAnalysisJobs \
  --infer-cmssw-path \
  --fwklite \
- --input-file-list=list.txt \
+ --use-hdfs \
+ --input-file-list="${alzr_dir}/Output/Lists/xrd_list_TTbar.txt" \
  --extra-inputs="${alzr_dir}/tomsAnalyzer.C,${alzr_dir}/tomsAnalyzer.h" \
  ${runname} farmoutAnalyzer.cc
 

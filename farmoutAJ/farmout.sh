@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#######################################################
+#
+#  This is the script you call to submit jobs
+#
+#  bash farmout.sh
+#
+#  nohup bash farmout.sh > submit_${runname}.out 2>&1&
+#
+#######################################################
+
 farmoutAnalysisJobs \
  --infer-cmssw-path \
  --fwklite \

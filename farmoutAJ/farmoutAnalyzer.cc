@@ -1,14 +1,14 @@
-/********************************
-Instantiates tomsAnalyzer.C with
-the correct chain and naming
-for a definable set of parameters
+/*******************************
+Runs tomsAnalyzer.C with
+$INPUT=xxx.inputs
+$OUTPUT=xxx.root
 
 Usage: 
 root -l -b
-.L callAnalyzer.cc
-callAnalyzer()
+.L farmoutAnalyzer.cc
+farmoutAnalyzer()
 
-root -l -b -q callAnalyzer.cc
+root -l -b -q farmoutAnalyzer.cc
 ********************************/
 
 #include <TStyle.h>
@@ -20,7 +20,7 @@ root -l -b -q callAnalyzer.cc
 #include <iostream>
 #include <exception>
 
-void callAnalyzer()
+void farmoutAnalyzer()
 {
  int error = 0;
  gROOT->ProcessLine(".L tomsAnalyzer.C++", &error);
@@ -40,11 +40,15 @@ void callAnalyzer()
  ifstream inputList;
  inputList.open(inputListName);
  if( !inputList.good() ) {
-   std::cerr << "Can not open automatically generated input list file:  " << inputListName << std::endl;
+   std::cerr << 
+   "Can not open automatically generated input list file:  "
+   << inputListName 
+   << std::endl;
    abort();
  }
   
  // Loop through lines in file (paths to .root files)
+ // and add to TChain
  TString infileName = "";
  while( !inputList.eof() ) {
   infileName="";
@@ -57,6 +61,7 @@ void callAnalyzer()
   infileName_dump.push_back(infileName);
   }
  
+  // Initialize and run analyzer on TChain
   m.Init(theChain);
   m.Loop( outfileName );
 

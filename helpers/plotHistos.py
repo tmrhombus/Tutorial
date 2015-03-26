@@ -12,11 +12,11 @@ import sys
 #import fnmatch as fnm
 import cmsPrelim as cpr
 
-path = './data/%s/'%(sys.argv[1])
+path = '%s'%(sys.argv[1])
 
 variables = ["goodJ1_pt","goodMuon_pt","goodJ3J4_mass"]
 
-in_fname = "%sAnalyzed_TTbar"%(path)
+in_fname = "%s/Analyzed_TTbar"%(path)
 in_file = TFile(in_fname+".root")
  
 # rebin factor
@@ -44,7 +44,7 @@ c.cd()
 for variable in variables: 
  print(variable)
  c.Clear()
- out_fname = "%sHistograms_TTbar_%s"%(path,variable)
+ out_fname = "%s/Histograms_TTbar_%s"%(path,variable)
  
  hist = in_file.Get( "h_%s"%(variable) )
  hist.Rebin( rebin )

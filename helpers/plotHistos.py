@@ -9,14 +9,18 @@ from ROOT import THStack,TH1F,TFile
 from ROOT import TLegend,TCanvas,TPad,TLatex,TLine
 from ROOT import gROOT,gStyle
 import sys
-#import fnmatch as fnm
+#import fnmatch as fnm # if you want to match with wildcards
+import os
 import cmsPrelim as cpr
-
-path = '%s'%(sys.argv[1])
 
 variables = ["goodJ1_pt","goodMuon_pt","goodJ3J4_mass"]
 
-in_fname = "%s/Analyzed_TTbar"%(path)
+runname=os.environ['runname']
+hdfs=os.environ['hdfs']
+runname=os.environ['runname']
+plotdir=os.environ['plotdir']
+
+in_fname = "%s/%s-farmoutAnalyzer/farmoutAnalyzer-nTuple_TTbar_SemiLeptonic_01" %(hdfs,runname)
 in_file = TFile(in_fname+".root")
  
 # rebin factor
@@ -44,7 +48,7 @@ c.cd()
 for variable in variables: 
  print(variable)
  c.Clear()
- out_fname = "%s/Histograms_TTbar_%s"%(path,variable)
+ out_fname = "%s/Histograms_%s_TTbar_%s"%(plotdir,runname,variable)
  
  hist = in_file.Get( "h_%s"%(variable) )
  hist.Rebin( rebin )

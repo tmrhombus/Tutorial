@@ -23,9 +23,6 @@ void callAnalyzer()
  TChain *theChain = new TChain("muEleEventTree/eventTree");
  theChain->Add("/hdfs/store/user/tperry/Tutorial/TTbar/nTuple_TTbar_SemiLeptonic_01.root");
 
- TTree* tree;
- TString dirName;
- 
  m.Init(theChain); 
  
  TString outdir = getenv("testdir");

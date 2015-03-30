@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''
- Merges histograms from the output of
- callHistoFiller.cc into one file
+ Plots the output of the analyzer in  
+ for multiple variables
  Author: T.M.Perry UW-Madison
 '''
 import ROOT
@@ -27,7 +27,6 @@ in_file = TFile(in_fname+".root")
 rebin = 1
 fcolor = ROOT.EColor.kGreen+1
 lcolor = ROOT.EColor.kViolet
-#lcolor = ROOT.EColor.kGreen+3
 sf = 1
 fillStyle = 1
 

@@ -8,7 +8,7 @@ export nfs="/nfs_scratch/${USER}"
  
 # Input
 # our base directory (where we have the analyzer)
-export alzr_dir="$(pwd)"
+export alzr_dir="${CMSSW_BASE}/src/Tutorial_analysisSubmission"
 # where we accesss the files from
 export base_in_dir="root://cmsxrootd.hep.wisc.edu//store/user/tperry/Tutorial"
 export hdfs_in_dir="/hdfs/store/user/tperry/Tutorial" # needed for find
